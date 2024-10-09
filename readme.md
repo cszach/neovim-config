@@ -41,7 +41,8 @@ My NeoVim configuration.
 
 ## ⌨️ Keyboard shortcuts
 
-> Note: The `<leader>` key for me is the backslash (`\`).
+> [!NOTE]
+> The `<leader>` key for me is the backslash (`\`).
 
 ### Normal mode
 
