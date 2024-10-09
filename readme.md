@@ -2,6 +2,24 @@
 
 My NeoVim configuration.
 
+## Table of contents
+
+- [📂 Files](#-files)
+- [🏃 Basics](#-basics)
+- [⌨️ Keyboard shortcuts](#%EF%B8%8F-keyboard-shortcuts)
+  - [Normal mode](#normal-mode)
+    - [NERDTree](#nerdtree)
+    - [CoC](#coc)
+    - [Telescope](#telescope)
+    - [Icon picker](#icon-picker)
+  - [Visual mode](#visual-mode)
+- [✨ Features](#-features)
+- [🧩 Plugins](#-plugins)
+- [⚙️ Plugin configurations](#%EF%B8%8F-plugin-configurations)
+  - [Startify](#startify)
+  - [Conqueror of Completion](#conqueror-of-completion)
+- [🪖 CoC plugins](#-coc-plugins)
+
 ## 📂 Files
 
 - `init.vim` is the main configuration file.
@@ -156,7 +174,7 @@ installed.
 ### Conqueror of Completion
 
 Most of the configuration for [CoC][coc] is in `coc.vim`, which sets a lot of
-the [keyboard shortcuts](#keyboard-shortcuts).
+the [keyboard shortcuts](#-keyboard-shortcuts).
 
 ## 🪖 CoC plugins
 
