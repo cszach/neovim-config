@@ -36,6 +36,7 @@ My NeoVim configuration.
 - Other than that, mostly stuff you'd expect (auto indent, show line numbers,
   show matching parens, etc).
 - Plugins are managed with [vim-plug][vim-plug].
+- Theme: `google` from [base16.nvim][base16.nvim].
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 
