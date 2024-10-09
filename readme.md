@@ -17,7 +17,7 @@ My NeoVim configuration.
 - [🧩 Plugins](#-plugins)
 - [⚙️ Plugin configurations](#%EF%B8%8F-plugin-configurations)
   - [Startify](#startify)
-  - [Conqueror of Completion](#conqueror-of-completion)
+  - [CoC](#coc-1)
 - [🪖 CoC plugins](#-coc-plugins)
 
 ## 📂 Files
@@ -96,7 +96,7 @@ My NeoVim configuration.
 
 ## 🧩 Plugins
 
-- [**copilot**][copilot]: GitHub Copilot for AI code completion.
+- [**copilot**][copilot.vim]: GitHub Copilot for AI code completion.
 - [**vim-snippets**][vim-snippets]: Snippets for various languages.
 - [**onedark**][onedark.vim]: One Dark theme for NeoVim (although I am not
   currently using it).
@@ -133,7 +133,7 @@ My NeoVim configuration.
 - [**icon-picker.nvim**][icon-picker.nvim]: Browse and insert icons, symbols,
   and emojis.
 
-[copilot]: https://github.com/github/copilot
+[copilot.vim]: https://github.com/github/copilot.vim
 [vim-snippets]: https://github.com/honza/vim-snippets
 [onedark.vim]: https://github.com/joshdick/onedark.vim
 [vim-startify]: https://github.com/mhinz/vim-startify
@@ -144,7 +144,7 @@ My NeoVim configuration.
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [nerdtree-visual-selection]: https://github.com/PhilRunninger/nerdtree-visual-selection
 [nerdcommenter]: https://github.com/preservim/nerdcommenter
-[vim-wasm]: https://github.com/rhysd/vim-wasm'
+[vim-wasm]: https://github.com/rhysd/vim-wasm
 [rust.vim]: https://github.com/rust-lang/rust.vim
 [vim-devicons]: https://github.com/ryanoasis/vim-devicons
 [neoformat]: https://github.com/sbdchd/neoformat
@@ -171,10 +171,10 @@ message.](./img/startify.png)
 using ASCII and a random cowsay message. Requires `figlet` and `cowsay` to be
 installed.
 
-### Conqueror of Completion
+### CoC
 
-Most of the configuration for [CoC][coc] is in `coc.vim`, which sets a lot of
-the [keyboard shortcuts](#-keyboard-shortcuts).
+Most of the configuration for CoC is in `coc.vim`, which sets a lot of the
+[keyboard shortcuts](#-keyboard-shortcuts).
 
 ## 🪖 CoC plugins
 
