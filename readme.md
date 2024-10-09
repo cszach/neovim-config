@@ -27,6 +27,7 @@ My NeoVim configuration.
     - [Icon picker](#icon-picker)
   - [Visual mode](#visual-mode)
 - [🧩 Plugins](#-plugins)
+  - [Post-installation](#post-installation)
 - [⚙️ Plugin configurations](#%EF%B8%8F-plugin-configurations)
   - [Startify](#startify)
   - [CoC](#coc-1)
@@ -103,7 +104,7 @@ My NeoVim configuration.
 
 ## 🧩 Plugins
 
-- [**copilot**][copilot.vim]: GitHub Copilot for AI code completion.
+- [**copilot.vim**][copilot.vim]: GitHub Copilot for AI code completion.
 - [**vim-snippets**][vim-snippets]: Snippets for various languages.
 - [**onedark**][onedark.vim]: One Dark theme for NeoVim (although I am not
   currently using it).
@@ -166,6 +167,13 @@ My NeoVim configuration.
 [icon-picker.nvim]: https://github.com/ziontee113/icon-picker.nvim
 
 [wakatime]: https://wakatime.com
+
+### Post-installation
+
+The following plugins require setting up after installation:
+
+- copilot.vim: `:Copilot setup`
+- vim-wakatime: `:WakaTimeApiKey`
 
 ## ⚙️ Plugin configurations
 
