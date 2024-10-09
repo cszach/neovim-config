@@ -2,6 +2,19 @@
 
 My NeoVim configuration.
 
+## ✨ Features
+
+- AI code assistant.
+- Code completion, navigation, and tree-sitter syntax highlighting.
+- Code diagnostics and code actions.
+- Code snippets.
+- Emoji and symbol picker.
+- Format on demand with `:Neoformat` (neoformat) or `:Format` (CoC).
+- Format on save ([neoformat][neoformat]).
+- Fuzzy finder.
+- Lots of themes.
+- And more!
+
 ## Table of contents
 
 - [📂 Files](#-files)
@@ -13,7 +26,6 @@ My NeoVim configuration.
     - [Telescope](#telescope)
     - [Icon picker](#icon-picker)
   - [Visual mode](#visual-mode)
-- [✨ Features](#-features)
 - [🧩 Plugins](#-plugins)
 - [⚙️ Plugin configurations](#%EF%B8%8F-plugin-configurations)
   - [Startify](#startify)
@@ -88,13 +100,6 @@ My NeoVim configuration.
 
 - `<leader>f`: Format the selection using CoC.
 - `<leader>a`: Apply/show code actions for the selection.
-
-## ✨ Features
-
-- AI code assistant.
-- Code diagnostics and code actions.
-- Format on demand with `:Neoformat` (neoformat) or `:Format` (CoC).
-- Format on save ([neoformat][neoformat]).
 
 ## 🧩 Plugins
 
