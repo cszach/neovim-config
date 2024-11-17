@@ -20,11 +20,14 @@ My NeoVim configuration.
 - [🏃 Basics](#-basics)
 - [⌨️ Keyboard shortcuts](#%EF%B8%8F-keyboard-shortcuts)
   - [Normal mode](#normal-mode)
-    - [NERDTree](#nerdtree)
+    - [Tabs][#tabs]
+    - [nvim-tree](#nvim-tree)
     - [CoC](#coc)
     - [Telescope](#telescope)
+    - [vim-surround](#vim-surround)
     - [Icon picker](#icon-picker)
   - [Visual mode](#visual-mode)
+    - [vim-surround](#vim-surround-1)
 - [🧩 Plugins](#-plugins)
   - [Post-installation](#post-installation)
 - [⚙️ Plugin configurations](#%EF%B8%8F-plugin-configurations)
@@ -58,7 +61,6 @@ My NeoVim configuration.
 > The `<leader>` key for me is the backslash (`\`).
 
 > [!NOTE]
-
 > `+` means the two keys are to be pressed together.
 
 > [!NOTE]
