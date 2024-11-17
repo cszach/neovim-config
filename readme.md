@@ -20,7 +20,7 @@ My NeoVim configuration.
 - [🏃 Basics](#-basics)
 - [⌨️ Keyboard shortcuts](#%EF%B8%8F-keyboard-shortcuts)
   - [Normal mode](#normal-mode)
-    - [Tabs][#tabs]
+    - [Tabs](#tabs)
     - [nvim-tree](#nvim-tree)
     - [CoC](#coc)
     - [Telescope](#telescope)
@@ -65,6 +65,8 @@ My NeoVim configuration.
 
 > [!NOTE]
 > Capital letters do not indiciate that the Shift key needs to be pressed.
+
+### Normal mode
 
 | Shortcut | Description              |
 | :------: | :----------------------- |
