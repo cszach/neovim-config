@@ -21,6 +21,7 @@ set splitright
 set ttyfast
 set wildmode=longest,list
 set updatetime=100
+let mapleader=","
 
 if (has("termguicolors"))
   set termguicolors
@@ -29,6 +30,9 @@ endif
 " vim-plug
 
 call plug#begin()
+  Plug 'adelarsq/image_preview.nvim'
+    autocmd VimEnter * lua require("image_preview").setup({})
+
   Plug 'airblade/vim-gitgutter'
 
   Plug 'danymat/neogen'

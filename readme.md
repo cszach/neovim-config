@@ -2,6 +2,8 @@
 
 My NeoVim configuration.
 
+![Screenshot](img/screenshot.jpg)
+
 ## ✨ Features
 
 - AI code assistant.
@@ -21,6 +23,7 @@ My NeoVim configuration.
 - [⌨️ Keyboard shortcuts](#%EF%B8%8F-keyboard-shortcuts)
   - [Normal mode](#normal-mode)
     - [Tabs](#tabs)
+    - [Image preview](#image-preview)
     - [nvim-tree](#nvim-tree)
     - [CoC](#coc)
     - [Telescope](#telescope)
@@ -52,119 +55,123 @@ My NeoVim configuration.
   show matching parens, etc).
 - Plugins are managed with [vim-plug][vim-plug].
 - Theme: `google` from [base16.nvim][base16.nvim].
+- **The leader key is comma (`,`).**
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 
 ## ⌨️ Keyboard shortcuts
 
 > [!NOTE]
-> The `<leader>` key for me is the backslash (`\`).
-
-> [!NOTE]
-> `+` means the two keys are to be pressed together.
-
-> [!NOTE]
-> Capital letters do not indiciate that the Shift key needs to be pressed.
+> The `<leader>` key is set to comma (`,`) in `init.vim`.
 
 ### Normal mode
 
 | Shortcut | Description              |
 | :------: | :----------------------- |
 | `:noa w` | Save without formatting. |
-| Ctrl + L | `:nohl`.                 |
+| `<C-l>`  | `:nohl`.                 |
 
 #### Tabs
 
-|      Shortcut      | Description         |
-| :----------------: | :------------------ |
-|     Ctrl + W T     | New tab.            |
-| Ctrl + Left arrow  | Go to previous tab. |
-| Ctrl + Right arrow | Go to next tab.     |
+|  Shortcut   | Description         |
+| :---------: | :------------------ |
+|  `<C-w>t`   | New tab.            |
+| `<C-Left>`  | Go to previous tab. |
+| `<C-Right>` | Go to next tab.     |
+
+#### Image preview
+
+Works on [nvim-tree][nvim-tree.lua].
+
+|  Shortcut   | Description    |
+| :---------: | :------------- |
+| `<leader>p` | Preview image. |
 
 #### nvim-tree
 
-| Shortcut  | Description                                      |
-| :-------: | :----------------------------------------------- |
-| Ctrl + N  | Open [nvim-tree][nvim-tree.lua].                 |
-| Ctrl + T  | Toggle nvim-tree.                                |
-| Ctrl + F  | Show opened file in nvim-tree.                   |
-| Ctrl + ]  | Set current folder as root folder.               |
-|   Enter   | Open file/folder.                                |
-|     A     | Create file (or directory if name ends with `/`. |
-| Ctrl + R  | Rename.                                          |
-|     C     | Copy.                                            |
-|     X     | Cut.                                             |
-|     P     | Paste.                                           |
-|     D     | Delete.                                          |
-|     -     | Go to parent directory.                          |
-|     Y     | Copy name.                                       |
-| Shift + Y | Copy relative path.                              |
-|    GY     | Copy absolute path.                              |
-| Shift + R | Refresh.                                         |
+| Shortcut | Description                                       |
+| :------: | :------------------------------------------------ |
+| `<C-n>`  | Open [nvim-tree][nvim-tree.lua].                  |
+| `<C-t>`  | Toggle nvim-tree.                                 |
+| `<C-f>`  | Show opened file in nvim-tree.                    |
+| `<C-]>`  | Set current folder as root folder.                |
+|  `<CR>`  | Open file/folder.                                 |
+|   `a`    | Create file (or directory if name ends with `/`). |
+| `<C-r>`  | Rename.                                           |
+|   `c`    | Copy.                                             |
+|   `x`    | Cut.                                              |
+|   `p`    | Paste.                                            |
+|   `d`    | Delete.                                           |
+|   `-`    | Go to parent directory.                           |
+|   `y`    | Copy name.                                        |
+|   `Y`    | Copy relative path.                               |
+|   `gy`   | Copy absolute path.                               |
+|   `R`    | Refresh.                                          |
 
 More shortcuts can be found in `:h nvim-tree-mappings-default`.
 
 #### CoC
 
-|    Shortcut    | Description                                        |
-| :------------: | :------------------------------------------------- |
-|      \[ G      | Go to previous warning/error.                      |
-|      \] G      | Go to next warning/error.                          |
-|      G D       | Go to the hovered symbol's definition.             |
-|      G Y       | Go to the symbol's type definition.                |
-|      G I       | Go to the symbol's implementation.                 |
-|      G R       | Show the symbol's references.                      |
-|   Shift + K    | Show documentation of the symbol under the cursor. |
-| `<leader>` R N | Rename symbol.                                     |
-| `<leader>` A C | Apply/show code actions at the cursor.             |
-| `<leader>` A S | Apply/show code actions for the whole file.        |
-|  `<space>` A   | Show diagnostics.                                  |
-|  `<space>` E   | Show installed CoC extensions.                     |
-|  `<space>` C   | Show CoC commands.                                 |
-|  `<space>` O   | Show the current file's outline.                   |
-|  `<space>` S   | Search workspace symbols.                          |
+|   Shortcut   | Description                                        |
+| :----------: | :------------------------------------------------- |
+|     `[g`     | Go to previous warning/error.                      |
+|     `]g`     | Go to next warning/error.                          |
+|     `gd`     | Go to the hovered symbol's definition.             |
+|     `gy`     | Go to the symbol's type definition.                |
+|     `gi`     | Go to the symbol's implementation.                 |
+|     `gr`     | Show the symbol's references.                      |
+|     `K`      | Show documentation of the symbol under the cursor. |
+| `<leader>rn` | Rename symbol.                                     |
+| `<leader>ac` | Apply/show code actions at the cursor.             |
+| `<leader>as` | Apply/show code actions for the whole file.        |
+|  `<space>a`  | Show diagnostics.                                  |
+|  `<space>e`  | Show installed CoC extensions.                     |
+|  `<space>c`  | Show CoC commands.                                 |
+|  `<space>o`  | Show the current file's outline.                   |
+|  `<space>s`  | Search workspace symbols.                          |
 
 More shortcuts can be found in [`coc.vim`](coc.vim).
 
 #### Telescope
 
-|    Shortcut    | Description                               |
-| :------------: | :---------------------------------------- |
-| `<leader>` F F | Find files.                               |
-| `<leader>` F G | Workspace grep (respecting `.gitignore`). |
-| `<leader>` F B | Find buffers.                             |
-| `<leader>` F H | Find help tags.                           |
+|   Shortcut   | Description                               |
+| :----------: | :---------------------------------------- |
+| `<leader>ff` | Find files.                               |
+| `<leader>fg` | Workspace grep (respecting `.gitignore`). |
+| `<leader>fb` | Find buffers.                             |
+| `<leader>fh` | Find help tags.                           |
 
 #### vim-surround
 
-| Shortcut  | Description                                                   |
-| :-------: | :------------------------------------------------------------ |
-| Y S I W " | Surround with double quotes (works with any character).       |
-|  C S ' "  | Replace single quotes with double (works with any character). |
-|   D S "   | Delete surrounding quotes (works with any character).         |
+| Shortcut | Description                                                   |
+| :------: | :------------------------------------------------------------ |
+| `ysiw"`  | Surround with double quotes (works with any character).       |
+|  `cs'"`  | Replace single quotes with double (works with any character). |
+|  `ds"`   | Delete surrounding quotes (works with any character).         |
 
 #### Icon picker
 
-|       Shortcut       | Description                               |
-| :------------------: | :---------------------------------------- |
-| `<leader><leader>` I | Browse icons and insert the selected one. |
-| `<leader><leader>` Y | Browse icons and yank the selected one.   |
+|      Shortcut       | Description                               |
+| :-----------------: | :---------------------------------------- |
+| `<leader><leader>i` | Browse icons and insert the selected one. |
+| `<leader><leader>y` | Browse icons and yank the selected one.   |
 
 ### Visual mode
 
-|   Shortcut   | Description                                |
-| :----------: | :----------------------------------------- |
-| `<leader>` F | Format the selection using CoC.            |
-| `<leader>` A | Apply/show code actions for the selection. |
+|  Shortcut   | Description                                |
+| :---------: | :----------------------------------------- |
+| `<leader>f` | Format the selection using CoC.            |
+| `<leader>a` | Apply/show code actions for the selection. |
 
 #### vim-surround
 
 | Shortcut | Description                                                       |
 | :------: | :---------------------------------------------------------------- |
-|   S "    | Surround selection with double quotes (works with any character). |
+|   `S"`   | Surround selection with double quotes (works with any character). |
 
 ## 🧩 Plugins
 
+- [**image_preview.nvim**][image_preview.nvim]: Image Preview for Neovim
 - [**vim-gitgutter**][vim-gitgutter]: A Vim plugin which shows git diff markers
   in the sign column and stages/previews/undoes hunks and partial hunks.
 - [**neogen**][neogen]: A better annotation generator. Supports multiple
@@ -206,6 +213,7 @@ More shortcuts can be found in [`coc.vim`](coc.vim).
 - [**icon-picker.nvim**][icon-picker.nvim]: Browse and insert icons, symbols,
   and emojis.
 
+[image_preview.nvim]: https://github.com/adelarsq/image_preview.nvim
 [vim-gitgutter]: https://github.com/airblade/vim-gitgutter
 [neogen]: https://github.com/danymat/neogen
 [copilot.vim]: https://github.com/github/copilot.vim
