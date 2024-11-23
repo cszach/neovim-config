@@ -64,13 +64,6 @@ call plug#begin()
       inoremap <silent><expr> <c-@> coc#refresh()
     endif
 
-    " Format on save
-
-    augroup fmt
-      autocmd!
-      autocmd BufWritePre * undojoin | Format
-    augroup END
-
   Plug 'norcalli/nvim-colorizer.lua'
     autocmd VimEnter * lua require'colorizer'.setup()
 

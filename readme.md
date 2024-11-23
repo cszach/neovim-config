@@ -264,6 +264,15 @@ installed.
 Most of the configuration for CoC is in `coc.vim`, which sets a lot of the
 [keyboard shortcuts](#-keyboard-shortcuts).
 
+Below is my `CocConfig`:
+
+```json
+{
+  "rust-analyzer.check.command": "clippy",
+  "coc.preferences.formatOnSave": true
+}
+```
+
 ## 🪖 CoC plugins
 
 CoC plugins enable syntax highlighting, inlay hints, code completion, code
