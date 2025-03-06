@@ -46,10 +46,11 @@ call plug#begin()
 
   Plug 'joshdick/onedark.vim'
 
+  Plug 'mfussenegger/nvim-dap'
+
   Plug 'mhinz/vim-startify'
     autocmd VimEnter * let g:startify_custom_header =
-      \ startify#pad(split(system('figlet -w 80 -f Isometric1 NVIM && echo'), '\n')
-      \ + startify#fortune#cowsay())
+      \ startify#pad(split(system('figlet -w 80 -f Isometric1 NVIM && echo'), '\n'))
     let g:startify_fortune_use_unicode = 1
     let g:startify_center = 1
 
@@ -122,7 +123,7 @@ call plug#begin()
   Plug 'xiyaowong/transparent.nvim'
 
   Plug 'ziontee113/icon-picker.nvim'
-    autocmd VimEnter * lua require'icon-picker'.setup({ disable_legacy_commands = true })
+    autocmd LspAttach * lua require'icon-picker'.setup({ disable_legacy_commands = true })
 
     nnoremap <silent> <leader><leader>i :IconPickerNormal<cr>
     nnoremap <silent> <leader><leader>y :IconPickerYank<cr>
@@ -154,6 +155,15 @@ lua << EOF
     },
     indent = {
       enable = true,
+    },
+  }
+
+  require 'dap'.adapters.codelldb = {
+    type = "server",
+    port = "${port}",
+    executable = {
+      command = "codelldb",
+      args = { "--port", "${port}" },
     },
   }
 EOF
