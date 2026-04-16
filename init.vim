@@ -22,6 +22,7 @@ set ttyfast
 set wildmode=longest,list
 set updatetime=100
 let mapleader=","
+let maplocalleader = ","
 
 if (has("termguicolors"))
   set termguicolors
@@ -33,18 +34,23 @@ call plug#begin()
   Plug 'adelarsq/image_preview.nvim'
     autocmd VimEnter * lua require("image_preview").setup({})
 
-  Plug 'airblade/vim-gitgutter'
-
   Plug 'danymat/neogen'
     autocmd VimEnter * lua require'neogen'.setup()
     nnoremap <silent> <leader>nf :lua require'neogen'.generate()<CR>
 
+  Plug 'folke/tokyonight.nvim'
+
+  Plug 'f-person/git-blame.nvim'
+    autocmd VimEnter * lua require('gitblame').setup()
+
   Plug 'github/copilot.vim'
-    autocmd VimEnter * :Copilot disable
 
   Plug 'honza/vim-snippets'
 
-  Plug 'joshdick/onedark.vim'
+  " Plug 'joshdick/onedark.vim'
+  
+  Plug 'MagicDuck/grug-far.nvim'
+    autocmd VimEnter * lua require'grug-far'.setup()
 
   Plug 'mfussenegger/nvim-dap'
 
@@ -113,14 +119,20 @@ call plug#begin()
   Plug 'tpope/vim-surround'
 
   Plug 'vim-airline/vim-airline'
-    let g:airline_theme='transparent'
+    function! AirlineInit()
+      let g:airline_section_z = airline#section#create_right(['%l', '%c'])
+    endfunction
+
+    let g:airline_theme='tokyonight'
     let g:airline#extensions#nerdtree_statusline=0
+
+    autocmd VimEnter * call AirlineInit()
 
   Plug 'vim-airline/vim-airline-themes'
 
   Plug 'wakatime/vim-wakatime'
 
-  Plug 'xiyaowong/transparent.nvim'
+  " Plug 'xiyaowong/transparent.nvim'
 
   Plug 'ziontee113/icon-picker.nvim'
     autocmd LspAttach * lua require'icon-picker'.setup({ disable_legacy_commands = true })
@@ -132,12 +144,25 @@ call plug#begin()
 call plug#end()
 
 syntax on
-colorscheme onedark
+colorscheme tokyonight-storm
 
 nnoremap <silent> <C-l> :nohl<CR>
 nnoremap <C-w>t :tabnew<CR>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+" coc-git keymappings
+
+nmap [h <Plug>(coc-git-prevchunk)
+nmap ]h <Plug>(coc-git-nextchunk)
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+nmap gs <Plug>(coc-git-chunkinfo)
+nmap gc <Plug>(coc-git-commit)
+omap ig <Plug>(coc-git-chunk-inner)
+xmap ig <Plug>(coc-git-chunk-inner)
+omap ag <Plug>(coc-git-chunk-outer)
+xmap ag <Plug>(coc-git-chunk-outer)
 
 " nvim-tree additional configuration
 
@@ -167,3 +192,4 @@ lua << EOF
     },
   }
 EOF
+
