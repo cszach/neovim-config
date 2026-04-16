@@ -2,7 +2,7 @@
 
 My NeoVim configuration.
 
-![Screenshot](img/screenshot.jpg)
+![Screenshot](img/screenshot.png)
 
 ## ✨ Features
 
@@ -10,10 +10,13 @@ My NeoVim configuration.
 - Code completion, navigation, and tree-sitter syntax highlighting.
 - Code diagnostics and code actions.
 - Code snippets.
+- Debugger.
 - Emoji and symbol picker.
 - Format on save.
 - Fuzzy finder.
+- Git integration (blame, chunk navigation, staging).
 - Lots of themes.
+- Workspace search and replace.
 - And more!
 
 ## Table of contents
@@ -23,12 +26,17 @@ My NeoVim configuration.
 - [⌨️ Keyboard shortcuts](#%EF%B8%8F-keyboard-shortcuts)
   - [Normal mode](#normal-mode)
     - [Tabs](#tabs)
+    - [neogen](#neogen)
     - [Image preview](#image-preview)
     - [nvim-tree](#nvim-tree)
     - [CoC](#coc)
+    - [coc-git](#coc-git)
     - [Telescope](#telescope)
     - [vim-surround](#vim-surround)
     - [Icon picker](#icon-picker)
+  - [Insert mode](#insert-mode)
+    - [UltiSnips](#ultisnips)
+    - [Icon picker](#icon-picker-1)
   - [Visual mode](#visual-mode)
     - [vim-surround](#vim-surround-1)
 - [🧩 Plugins](#-plugins)
@@ -54,7 +62,7 @@ My NeoVim configuration.
 - Other than that, mostly stuff you'd expect (auto indent, show line numbers,
   show matching parens, etc).
 - Plugins are managed with [vim-plug][vim-plug].
-- Theme: `google` from [base16.nvim][base16.nvim].
+- Theme: `tokyonight-storm` from [tokyonight.nvim][tokyonight.nvim].
 - **The leader key is comma (`,`).**
 
 [vim-plug]: https://github.com/junegunn/vim-plug
@@ -78,6 +86,12 @@ My NeoVim configuration.
 |  `<C-w>t`   | New tab.            |
 | `<C-Left>`  | Go to previous tab. |
 | `<C-Right>` | Go to next tab.     |
+
+#### neogen
+
+|   Shortcut   | Description                                  |
+| :----------: | :------------------------------------------- |
+| `<leader>nf` | Generate annotation for symbol under cursor. |
 
 #### Image preview
 
@@ -132,6 +146,20 @@ More shortcuts can be found in `:h nvim-tree-mappings-default`.
 
 More shortcuts can be found in [`coc.vim`](coc.vim).
 
+#### coc-git
+
+| Shortcut | Description                            |
+| :------: | :------------------------------------- |
+|   `[h`   | Go to previous git chunk.              |
+|   `]h`   | Go to next git chunk.                  |
+|   `[c`   | Go to previous git merge conflict.     |
+|   `]c`   | Go to next git merge conflict.         |
+|   `gs`   | Show info for the current git chunk.   |
+|   `gc`   | Show commit info for the current line. |
+
+Text objects `ig` and `ag` select inside/around the current git chunk (usable
+in visual and operator-pending modes).
+
 #### Telescope
 
 |   Shortcut   | Description                               |
@@ -156,6 +184,22 @@ More shortcuts can be found in [`coc.vim`](coc.vim).
 | `<leader><leader>i` | Browse icons and insert the selected one. |
 | `<leader><leader>y` | Browse icons and yank the selected one.   |
 
+### Insert mode
+
+#### UltiSnips
+
+| Shortcut | Description                               |
+| :------: | :---------------------------------------- |
+| `<Tab>`  | Expand snippet or jump to the next field. |
+| `<C-b>`  | Jump to the next field.                   |
+| `<C-z>`  | Jump to the previous field.               |
+
+#### Icon picker
+
+| Shortcut | Description                               |
+| :------: | :---------------------------------------- |
+| `<C-i>`  | Browse icons and insert the selected one. |
+
 ### Visual mode
 
 |  Shortcut   | Description                                |
@@ -172,14 +216,20 @@ More shortcuts can be found in [`coc.vim`](coc.vim).
 ## 🧩 Plugins
 
 - [**image_preview.nvim**][image_preview.nvim]: Image Preview for Neovim
-- [**vim-gitgutter**][vim-gitgutter]: A Vim plugin which shows git diff markers
-  in the sign column and stages/previews/undoes hunks and partial hunks.
 - [**neogen**][neogen]: A better annotation generator. Supports multiple
   languages and annotation conventions.
+- [**tokyonight.nvim**][tokyonight.nvim]: A clean, dark Neovim theme. The
+  currently active colorscheme.
+- [**git-blame.nvim**][git-blame.nvim]: Shows git blame information for the
+  current line as virtual text.
 - [**copilot.vim**][copilot.vim]: GitHub Copilot for AI code completion.
 - [**vim-snippets**][vim-snippets]: Snippets for various languages.
 - [**onedark**][onedark.vim]: One Dark theme for NeoVim (although I am not
   currently using it).
+- [**grug-far.nvim**][grug-far.nvim]: Workspace-wide find and replace in a
+  dedicated buffer UI.
+- [**nvim-dap**][nvim-dap]: Debug Adapter Protocol client for debugging various
+  languages.
 - [**vim-startify**][vim-startify]: A fancy start screen for NeoVim.
 - [**coc.nvim**][coc]: Conqueror of Completion for code completion and LSP-based
   code navigation.
@@ -209,16 +259,20 @@ More shortcuts can be found in [`coc.vim`](coc.vim).
 - [**vim-wakatime**][vim-wakatime]: [WakaTime][wakatime] plugin for tracking
   time spent in NeoVim.
 - [**transparent.nvim**][transparent.nvim]: Makes NeoVim transparent e.g. so
-  the terminal wallpaper may be visible.
+  the terminal wallpaper may be visible (although I am not currently using
+  it).
 - [**icon-picker.nvim**][icon-picker.nvim]: Browse and insert icons, symbols,
   and emojis.
 
 [image_preview.nvim]: https://github.com/adelarsq/image_preview.nvim
-[vim-gitgutter]: https://github.com/airblade/vim-gitgutter
 [neogen]: https://github.com/danymat/neogen
+[tokyonight.nvim]: https://github.com/folke/tokyonight.nvim
+[git-blame.nvim]: https://github.com/f-person/git-blame.nvim
 [copilot.vim]: https://github.com/github/copilot.vim
 [vim-snippets]: https://github.com/honza/vim-snippets
 [onedark.vim]: https://github.com/joshdick/onedark.vim
+[grug-far.nvim]: https://github.com/MagicDuck/grug-far.nvim
+[nvim-dap]: https://github.com/mfussenegger/nvim-dap
 [vim-startify]: https://github.com/mhinz/vim-startify
 [coc]: https://github.com/neoclide/coc.nvim
 [nvim-colorizer]: https://github.com/norcalli/nvim-colorizer.lua
@@ -285,6 +339,7 @@ The CoC plugins that I have installed as of this commit are:
 - coc-prettier
 - coc-marketplace
 - coc-html
+- coc-git
 - coc-tsserver
 - coc-toml
 - coc-rust-analyzer
